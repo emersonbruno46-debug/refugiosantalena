@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #EDE9DF;
+  --canvas: #F5F1E8;
+  --limestone: #B9B3A6;
+  --rock: #77756E;
+  --graphite: #292A27;
+  --summit: #151715;
+  --forest: #36453A;
+  --moss: #727D62;
+  --clay: #9B6248;
+  --rust: #B75E3F;
+  --signal: #D86A3E;
+  --fire: #C67A48;
+}
+
+body {
+  background-color: #151715;
+  color: #EDE9DF;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Space Grotesk', 'Archivo', sans-serif;
+}
+
+code, pre, .font-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Custom Cartographic Topo Grid Pattern */
+.bg-topo-pattern {
+  background-image: radial-gradient(rgba(185, 179, 166, 0.15) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-topo-lines {
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(185, 179, 166, 0.05) 20px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #151715;
+}
+::-webkit-scrollbar-thumb {
+  background: #292A27;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D86A3E;
+}
