@@ -26,54 +26,54 @@ export const TrailConnection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-8 bg-summit relative overflow-hidden border-t border-graphite">
+    <section className="py-24 px-4 sm:px-8 bg-wl-canvas relative overflow-hidden border-t border-wl-border">
       <div className="max-w-7xl mx-auto relative z-10 space-y-12">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-rock/30 pb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-wl-border pb-8">
           <div>
-            <div className="inline-flex items-center gap-2 font-sans text-xs text-signal uppercase tracking-widest font-semibold mb-3">
-              <Footprints className="w-4 h-4 text-signal" />
+            <div className="inline-flex items-center gap-2 font-sans text-xs text-hl-moss uppercase tracking-wider font-semibold mb-3">
+              <Footprints className="w-4 h-4 text-hl-moss" />
               SAIA DO PORTÃO
             </div>
-            <h2 className="font-display font-medium text-3xl sm:text-5xl text-paper tracking-tight leading-tight">
+            <h2 className="font-display font-medium text-3xl sm:text-5xl text-wl-text tracking-tight leading-tight">
               A montanha começa perto.
             </h2>
           </div>
-          <p className="font-sans text-xs text-limestone max-w-md">
+          <p className="font-sans text-xs text-wl-secondary max-w-md">
             O Refúgio Santalena está localizado estrategicamente no bairro Paiol Grande, na rota de acesso direto aos principais atrativos naturais da serra.
           </p>
         </div>
 
-        {/* Trail Cards Grid */}
+        {/* Trail Cards Grid (Treated as borderless, text-led cards) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {trails.map((trail, index) => (
             <div
               key={trail.id}
-              className="bg-graphite/60 border border-rock/30 p-8 rounded-lg hover:border-signal/60 transition-colors flex flex-col justify-between space-y-6 group"
+              className="bg-wl-cream p-8 rounded-xl flex flex-col justify-between space-y-6 group shadow-sm transition-all hover:bg-wl-cream/90"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between font-sans text-xs">
-                  <span className="text-signal font-bold">ROTA 0{index + 1}</span>
-                  <span className="px-2.5 py-0.5 bg-summit text-limestone border border-rock/30 rounded-full text-[10px] tracking-wide font-medium">
+                  <span className="text-hl-moss font-semibold">ROTA 0{index + 1}</span>
+                  <span className="text-hl-terracotta text-[10px] uppercase font-bold tracking-wider">
                     {trail.tag}
                   </span>
                 </div>
 
-                <h3 className="font-display font-medium text-2xl text-paper group-hover:text-signal transition-colors">
+                <h3 className="font-display font-medium text-2xl text-wl-text group-hover:text-hl-terracotta transition-colors">
                   {trail.name}
                 </h3>
 
-                <span className="block font-sans text-xs text-rock font-medium">
+                <span className="block font-sans text-xs text-wl-secondary font-medium">
                   {trail.type}
                 </span>
 
-                <p className="font-sans text-sm text-limestone leading-relaxed">
+                <p className="font-sans text-sm text-wl-secondary leading-[1.65]">
                   {trail.desc}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-rock/20 flex items-center gap-2 font-sans text-xs text-paper">
-                <MapPin className="w-3.5 h-3.5 text-signal" />
+              <div className="pt-4 border-t border-wl-border flex items-center gap-2 font-sans text-xs text-wl-text font-medium">
+                <MapPin className="w-3.5 h-3.5 text-hl-moss" />
                 <span>Acesso Próximo via Paiol Grande</span>
               </div>
             </div>

@@ -21,7 +21,29 @@ export default {
         signal: 'var(--signal)',
         fire: 'var(--fire)',
 
-        // Explicit new semantic palette tokens
+        // Final Hospitality Warmth Pass colors
+        'wl-canvas': '#F1EADF',      // warm_light canvas
+        'wl-cream': '#F8F4EC',       // warm_light cream
+        'wl-parchment': '#E7DCCD',    // warm_light parchment
+        'wl-surface': '#F7F1E7',      // warm_light surface
+        'wl-text': '#302A25',         // warm_light primary text
+        'wl-secondary': '#6D6258',     // warm_light secondary text
+        'wl-border': 'rgba(61,48,39,0.10)',
+
+        'dk-bg': '#24201C',          // dark background
+        'dk-secondary': '#2B2722',   // dark secondary surface
+        'dk-forest': '#29342A',      // dark forest highlight
+        'dk-text': '#F3EDE3',        // dark primary text
+        'dk-secondary-text': '#C8BDB0', // dark secondary text
+        'dk-border': 'rgba(245,235,222,0.08)',
+
+        // Muted hospitality highlights
+        'hl-terracotta': '#A65F43',
+        'hl-clay': '#93634E',
+        'hl-moss': '#66705C',
+        'hl-forest': '#314233',
+
+        // Legacy/fallback definitions
         'warm-cream': '#FAF7F0',
         'warm-canvas': '#F4EFE6',
         parchment: '#E9E0D2',

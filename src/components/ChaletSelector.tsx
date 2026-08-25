@@ -70,23 +70,23 @@ export const ChaletSelector: React.FC = () => {
   const activeChalet = chalets.find(c => c.id === activeChaletId) || chalets[0];
 
   return (
-    <section id="chales" className="py-24 px-4 sm:px-8 bg-summit relative overflow-hidden">
+    <section id="chales" className="py-24 px-4 sm:px-8 bg-dk-bg relative overflow-hidden">
       {/* Background Cartography */}
       <div className="absolute inset-0 bg-topo-pattern opacity-10 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 border-b border-rock/30 pb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 border-b border-dk-border pb-8">
           <div>
-            <div className="inline-flex items-center gap-2 font-sans text-xs text-signal uppercase tracking-widest mb-3">
-              <span className="w-2 h-2 rounded-full bg-signal"></span>
+            <div className="inline-flex items-center gap-2 font-sans text-xs text-hl-moss uppercase tracking-wider font-semibold mb-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-hl-moss"></span>
               ACOMODAÇÕES / 02
             </div>
-            <h2 className="font-display font-medium text-3xl sm:text-5xl text-paper tracking-tight">
+            <h2 className="font-display font-medium text-3xl sm:text-5xl text-dk-text tracking-tight">
               Escolha sua montanha.
             </h2>
           </div>
-          <p className="font-sans text-xs text-limestone max-w-md">
+          <p className="font-sans text-xs text-dk-secondary-text max-w-md">
             Cada chalé recebe o nome de uma grande montanha do mundo e possui arquitetura, materialidade e vista próprias.
           </p>
         </div>
@@ -95,7 +95,7 @@ export const ChaletSelector: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Column: Chalet Route Selector Tabs */}
           <div className="lg:col-span-4 space-y-4">
-            <span className="font-sans text-[10px] text-rock uppercase tracking-wider block mb-2">
+            <span className="font-sans text-[10px] text-hl-moss uppercase tracking-wider block mb-2 font-semibold">
               QUADRO DE ROTAS DE HOSPEDAGEM
             </span>
 
@@ -107,37 +107,37 @@ export const ChaletSelector: React.FC = () => {
                   onClick={() => setActiveChaletId(chalet.id)}
                   className={`w-full text-left p-6 rounded-lg border transition-all duration-300 relative overflow-hidden group ${
                     isActive
-                      ? 'bg-graphite border-signal shadow-lg shadow-signal/10'
-                      : 'bg-summit border-rock/30 hover:border-rock/60 hover:bg-graphite/40'
+                      ? 'bg-dk-secondary border-hl-moss/40 shadow-md'
+                      : 'bg-dk-bg border-dk-border/40 hover:border-dk-border/80 hover:bg-dk-secondary/35'
                   }`}
                 >
                   {/* Left Indicator Line */}
                   <div
                     className={`absolute left-0 top-0 bottom-0 w-1 transition-colors ${
-                      isActive ? 'bg-signal' : 'bg-transparent group-hover:bg-rock/40'
+                      isActive ? 'bg-hl-moss' : 'bg-transparent group-hover:bg-hl-moss/20'
                     }`}
                   />
 
                   <div className="flex items-start justify-between mb-2">
-                    <span className="font-sans text-xs font-bold text-signal">
+                    <span className="font-sans text-xs font-semibold text-hl-moss">
                       ROTA / {chalet.number}
                     </span>
-                    <span className="font-sans text-[10px] text-limestone bg-summit px-2.5 py-0.5 border border-rock/30 rounded-full tracking-wider font-medium">
+                    <span className="font-sans text-[10px] text-dk-secondary-text tracking-wide font-medium">
                       {chalet.badge.split('·')[0]}
                     </span>
                   </div>
 
-                  <h3 className="font-display font-medium text-2xl text-paper group-hover:text-signal transition-colors mb-1">
+                  <h3 className="font-display font-medium text-2xl text-dk-text group-hover:text-hl-terracotta transition-colors mb-1">
                     Chalé {chalet.name}
                   </h3>
 
-                  <p className="font-sans text-xs text-limestone line-clamp-1 mb-3">
+                  <p className="font-sans text-xs text-dk-secondary-text line-clamp-1 mb-3">
                     {chalet.subtitle}
                   </p>
 
                   <div className="flex items-center gap-3 font-sans text-[11px] text-rock">
-                    <span className="flex items-center gap-1 text-paper">
-                      <Star className="w-3 h-3 text-signal fill-signal" />
+                    <span className="flex items-center gap-1 text-dk-text">
+                      <Star className="w-3 h-3 text-hl-terracotta fill-hl-terracotta" />
                       {chalet.rating}
                     </span>
                     <span>·</span>
@@ -148,8 +148,8 @@ export const ChaletSelector: React.FC = () => {
             })}
 
             {/* Quick Note Box */}
-            <div className="p-4 bg-graphite/40 border border-rock/20 rounded-sm font-sans text-xs text-limestone space-y-2 mt-6">
-              <div className="flex items-center gap-2 text-signal">
+            <div className="p-4 bg-dk-secondary/40 border border-dk-border rounded-lg font-sans text-xs text-dk-secondary-text space-y-2 mt-6">
+              <div className="flex items-center gap-2 text-hl-moss">
                 <Mountain className="w-4 h-4" />
                 <span className="font-semibold uppercase tracking-wider">Nota de Reserva</span>
               </div>
@@ -160,7 +160,7 @@ export const ChaletSelector: React.FC = () => {
           </div>
 
           {/* Right Column: Active Chalet Preview & Deep Details */}
-          <div className="lg:col-span-8 bg-graphite border border-rock/30 rounded-lg overflow-hidden flex flex-col justify-between">
+          <div className="lg:col-span-8 bg-dk-secondary border border-dk-border rounded-xl overflow-hidden flex flex-col justify-between">
             {/* Image Preview Box */}
             <div className="relative h-80 sm:h-[420px] w-full overflow-hidden">
               <img
@@ -168,19 +168,19 @@ export const ChaletSelector: React.FC = () => {
                 alt={`Chalé ${activeChalet.name}`}
                 className="w-full h-full object-cover filter contrast-[1.05] transition-transform duration-700 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-graphite via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-dk-secondary via-transparent to-transparent"></div>
 
               {/* Top Rating Badge */}
-              <div className="absolute top-4 right-4 bg-summit/90 backdrop-blur-md px-3.5 py-1.5 border border-rock/40 font-sans text-xs text-paper flex items-center gap-2 rounded-full font-medium">
-                <Star className="w-3.5 h-3.5 text-signal fill-signal" />
+              <div className="absolute top-4 right-4 bg-dk-bg/80 backdrop-blur-md px-3 py-1 border border-dk-border/40 font-sans text-xs text-dk-text flex items-center gap-2 rounded-full font-medium">
+                <Star className="w-3.5 h-3.5 text-hl-terracotta fill-hl-terracotta" />
                 <span className="font-semibold">{activeChalet.rating}</span>
-                <span className="text-limestone">({activeChalet.reviewsCount})</span>
+                <span className="text-dk-secondary-text">({activeChalet.reviewsCount})</span>
               </div>
 
               {/* Bottom Image Caption */}
-              <div className="absolute bottom-4 left-6 right-6 flex items-center justify-between font-sans text-xs text-paper">
-                <div className="bg-summit/80 backdrop-blur-sm px-3.5 py-1 border border-rock/30 rounded-full font-medium">
-                  <span className="text-signal font-semibold">ROTA {activeChalet.number}</span> · CHALÉ {activeChalet.name.toUpperCase()}
+              <div className="absolute bottom-4 left-6 right-6 flex items-center justify-between font-sans text-xs text-dk-text">
+                <div className="bg-dk-bg/85 backdrop-blur-md px-3 py-1 text-dk-text rounded-full">
+                  <span className="text-hl-terracotta font-semibold">ROTA {activeChalet.number}</span> · CHALÉ {activeChalet.name.toUpperCase()}
                 </div>
               </div>
             </div>
@@ -188,46 +188,46 @@ export const ChaletSelector: React.FC = () => {
             {/* Chalet Specs & Content Body */}
             <div className="p-6 sm:p-8 space-y-6">
               <div>
-                <span className="font-sans text-xs text-signal uppercase tracking-widest font-semibold">
+                <span className="font-sans text-xs text-hl-terracotta uppercase tracking-wider font-semibold">
                   {activeChalet.badge}
                 </span>
-                <h3 className="font-display font-medium text-3xl text-paper mt-1 mb-2">
+                <h3 className="font-display font-medium text-3xl text-dk-text mt-1 mb-2">
                   Chalé {activeChalet.name}
                 </h3>
-                <p className="font-sans text-base text-limestone leading-relaxed">
+                <p className="font-sans text-base text-dk-secondary-text leading-relaxed">
                   {activeChalet.tagline}
                 </p>
               </div>
 
               {/* Specs Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4 border-y border-rock/30 font-sans text-xs">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4 border-y border-dk-border font-sans text-xs">
                 <div className="flex items-start gap-2.5">
-                  <Users className="w-4 h-4 text-signal shrink-0 mt-0.5" />
+                  <Users className="w-4 h-4 text-hl-moss shrink-0 mt-0.5" />
                   <div>
-                    <span className="block text-rock text-[10px] uppercase tracking-wider">CAPACIDADE</span>
-                    <span className="text-paper font-medium">{activeChalet.capacity}</span>
+                    <span className="block text-hl-moss text-[10px] uppercase tracking-wider font-semibold">CAPACIDADE</span>
+                    <span className="text-dk-text font-medium">{activeChalet.capacity}</span>
                   </div>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <Eye className="w-4 h-4 text-signal shrink-0 mt-0.5" />
+                  <Eye className="w-4 h-4 text-hl-moss shrink-0 mt-0.5" />
                   <div>
-                    <span className="block text-rock text-[10px] uppercase tracking-wider">VISTA PRINCIPAL</span>
-                    <span className="text-paper font-medium">{activeChalet.view}</span>
+                    <span className="block text-hl-moss text-[10px] uppercase tracking-wider font-semibold">VISTA PRINCIPAL</span>
+                    <span className="text-dk-text font-medium">{activeChalet.view}</span>
                   </div>
                 </div>
               </div>
 
               {/* Highlights List */}
               <div>
-                <h4 className="font-sans text-xs font-bold text-paper uppercase tracking-wider mb-3 flex items-center gap-2">
-                  <Flame className="w-4 h-4 text-signal" />
+                <h4 className="font-sans text-xs font-bold text-dk-text uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <Flame className="w-4 h-4 text-hl-moss" />
                   Destaques da Acomodação
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {activeChalet.highlights.map((h, idx) => (
-                    <div key={idx} className="flex items-center gap-2 font-sans text-xs text-limestone">
-                      <div className="w-4 h-4 rounded-full bg-signal/20 flex items-center justify-center shrink-0">
-                        <Check className="w-3 h-3 text-signal" />
+                    <div key={idx} className="flex items-center gap-2 font-sans text-xs text-dk-secondary-text">
+                      <div className="w-4 h-4 rounded-full bg-hl-moss/10 flex items-center justify-center shrink-0">
+                        <Check className="w-3 h-3 text-hl-moss" />
                       </div>
                       <span>{h}</span>
                     </div>
@@ -236,15 +236,15 @@ export const ChaletSelector: React.FC = () => {
               </div>
 
               {/* Booking Action CTA */}
-              <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-rock/20">
-                <div className="font-sans text-xs text-limestone">
+              <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-dk-border">
+                <div className="font-sans text-xs text-dk-secondary-text">
                   Disponibilidade em tempo real no Airbnb oficial
                 </div>
                 <a
                   href={activeChalet.airbnbUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-deep-forest hover:bg-forest text-warm-cream font-sans text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow-md shadow-deep-forest/20"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-hl-forest hover:bg-hl-forest/90 text-dk-text font-sans text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow-md shadow-hl-forest/10"
                 >
                   Consultar Datas — Chalé {activeChalet.name}
                   <ArrowUpRight className="w-4 h-4" />

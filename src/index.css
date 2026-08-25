@@ -2,38 +2,39 @@
 @config "../tailwind.config.js";
 
 :root {
-  --paper: #FAF7F0;          /* warm_cream */
-  --canvas: #F4EFE6;         /* warm_canvas */
-  --limestone: #D0C2B0;      /* sandstone */
-  --rock: #77806C;           /* sage */
-  --graphite: #2D2925;       /* warm_charcoal */
-  --summit: #211E1B;         /* deep_charcoal */
-  --forest: #394538;         /* forest */
-  --moss: #59634F;           /* moss */
-  --clay: #A8684C;           /* clay */
-  --rust: #914D38;           /* burnt_terracotta */
-  --signal: #B76043;         /* terracotta */
-  --fire: #C27A50;           /* ember */
+  --paper: #F3EDE3;          /* dk-text */
+  --canvas: #24201C;         /* dk-bg */
+  --limestone: #C8BDB0;      /* dk-secondary-text */
+  --rock: #66705C;           /* hl-moss */
+  --graphite: #2B2722;       /* dk-secondary */
+  --summit: #24201C;         /* dk-bg */
+  --forest: #29342A;         /* dk-forest */
+  --moss: #66705C;           /* hl-moss */
+  --clay: #93634E;           /* hl-clay */
+  --rust: #914D38;           
+  --signal: #A65F43;         /* hl-terracotta */
+  --fire: #C27A50;           
 
   /* Extra new tokens */
-  --warm-cream: #FAF7F0;
-  --warm-canvas: #F4EFE6;
-  --parchment: #E9E0D2;
-  --sandstone: #D0C2B0;
-  --sage: #77806C;
-  --deep-forest: #263027;
+  --warm-cream: #F8F4EC;
+  --warm-canvas: #F1EADF;
+  --parchment: #E7DCCD;
+  --sandstone: #C8BDB0;
+  --sage: #66705C;
+  --deep-forest: #29342A;
   --walnut: #654D3C;
   --dark-wood: #49372D;
   --burnt-terracotta: #914D38;
-  --warm-charcoal: #2D2925;
-  --deep-charcoal: #211E1B;
+  --warm-charcoal: #302A25;
+  --deep-charcoal: #24201C;
   --soft-white: #FFFDF8;
 }
 
 body {
-  background-color: #211E1B; /* deep_charcoal */
-  color: #FAF7F0;            /* warm_cream */
+  background-color: #24201C; /* dk-bg */
+  color: #F3EDE3;            /* dk-text */
   font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, .font-display {
@@ -72,12 +73,12 @@ body::before {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #211E1B;
+  background: #24201C;
 }
 ::-webkit-scrollbar-thumb {
   background: #49372D;
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B76043;
+  background: #A65F43;
 }
