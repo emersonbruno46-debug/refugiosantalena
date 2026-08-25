@@ -26,20 +26,20 @@ export const TrailConnection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-8 bg-[#151715] relative overflow-hidden border-t border-[#292A27]">
+    <section className="py-24 px-4 sm:px-8 bg-summit relative overflow-hidden border-t border-graphite">
       <div className="max-w-7xl mx-auto relative z-10 space-y-12">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#77756E]/30 pb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-rock/30 pb-8">
           <div>
-            <div className="inline-flex items-center gap-2 font-mono text-xs text-[#D86A3E] uppercase tracking-widest mb-3">
-              <Footprints className="w-4 h-4 text-[#D86A3E]" />
+            <div className="inline-flex items-center gap-2 font-sans text-xs text-signal uppercase tracking-widest font-semibold mb-3">
+              <Footprints className="w-4 h-4 text-signal" />
               SAIA DO PORTÃO
             </div>
-            <h2 className="font-display font-bold text-3xl sm:text-5xl text-[#EDE9DF] tracking-tight leading-tight">
+            <h2 className="font-display font-medium text-3xl sm:text-5xl text-paper tracking-tight leading-tight">
               A montanha começa perto.
             </h2>
           </div>
-          <p className="font-mono text-xs text-[#B9B3A6] max-w-md">
+          <p className="font-sans text-xs text-limestone max-w-md">
             O Refúgio Santalena está localizado estrategicamente no bairro Paiol Grande, na rota de acesso direto aos principais atrativos naturais da serra.
           </p>
         </div>
@@ -49,31 +49,31 @@ export const TrailConnection: React.FC = () => {
           {trails.map((trail, index) => (
             <div
               key={trail.id}
-              className="bg-[#292A27]/60 border border-[#77756E]/30 p-8 rounded-sm hover:border-[#D86A3E]/60 transition-colors flex flex-col justify-between space-y-6 group"
+              className="bg-graphite/60 border border-rock/30 p-8 rounded-lg hover:border-signal/60 transition-colors flex flex-col justify-between space-y-6 group"
             >
               <div className="space-y-4">
-                <div className="flex items-center justify-between font-mono text-xs">
-                  <span className="text-[#D86A3E] font-bold">ROTA 0{index + 1}</span>
-                  <span className="px-2 py-0.5 bg-[#151715] text-[#B9B3A6] border border-[#77756E]/30 rounded-xs text-[10px]">
+                <div className="flex items-center justify-between font-sans text-xs">
+                  <span className="text-signal font-bold">ROTA 0{index + 1}</span>
+                  <span className="px-2.5 py-0.5 bg-summit text-limestone border border-rock/30 rounded-full text-[10px] tracking-wide font-medium">
                     {trail.tag}
                   </span>
                 </div>
 
-                <h3 className="font-display font-bold text-2xl text-[#EDE9DF] group-hover:text-[#D86A3E] transition-colors">
+                <h3 className="font-display font-medium text-2xl text-paper group-hover:text-signal transition-colors">
                   {trail.name}
                 </h3>
 
-                <span className="block font-mono text-xs text-[#77756E]">
+                <span className="block font-sans text-xs text-rock font-medium">
                   {trail.type}
                 </span>
 
-                <p className="font-sans text-sm text-[#B9B3A6] leading-relaxed">
+                <p className="font-sans text-sm text-limestone leading-relaxed">
                   {trail.desc}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#77756E]/20 flex items-center gap-2 font-mono text-xs text-[#EDE9DF]">
-                <MapPin className="w-3.5 h-3.5 text-[#D86A3E]" />
+              <div className="pt-4 border-t border-rock/20 flex items-center gap-2 font-sans text-xs text-paper">
+                <MapPin className="w-3.5 h-3.5 text-signal" />
                 <span>Acesso Próximo via Paiol Grande</span>
               </div>
             </div>

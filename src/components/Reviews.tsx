@@ -26,33 +26,33 @@ export const Reviews: React.FC = () => {
   ];
 
   return (
-    <section id="avaliacoes" className="py-24 px-4 sm:px-8 bg-[#151715] relative overflow-hidden border-t border-[#292A27]">
+    <section id="avaliacoes" className="py-24 px-4 sm:px-8 bg-summit relative overflow-hidden border-t border-graphite">
       {/* Topo Lines */}
       <div className="absolute inset-0 bg-topo-lines opacity-10 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10 space-y-16">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#77756E]/30 pb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-rock/30 pb-8">
           <div>
-            <div className="inline-flex items-center gap-2 font-mono text-xs text-[#D86A3E] uppercase tracking-widest mb-3">
-              <Star className="w-4 h-4 text-[#D86A3E] fill-[#D86A3E]" />
+            <div className="inline-flex items-center gap-2 font-sans text-xs text-signal uppercase tracking-widest font-semibold mb-3">
+              <Star className="w-4 h-4 text-signal fill-signal" />
               GUEST LOGBOOK · RECONHECIMENTO OFICIAL
             </div>
-            <h2 className="font-display font-bold text-3xl sm:text-5xl text-[#EDE9DF] tracking-tight">
+            <h2 className="font-display font-medium text-3xl sm:text-5xl text-paper tracking-tight">
               Quem passou por aqui deixou registro.
             </h2>
           </div>
 
           {/* Metrics Card */}
-          <div className="flex flex-wrap items-center gap-4 bg-[#292A27] px-5 py-3 border border-[#77756E]/30 rounded-sm font-mono text-xs">
+          <div className="flex flex-wrap items-center gap-4 bg-graphite px-5 py-3 border border-rock/30 rounded-full font-sans text-xs">
             <div className="flex items-center gap-2">
-              <Star className="w-4 h-4 text-[#D86A3E] fill-[#D86A3E]" />
-              <span className="font-bold text-lg text-[#EDE9DF]">4.97</span>
+              <Star className="w-4 h-4 text-signal fill-signal" />
+              <span className="font-semibold text-lg text-paper">4.97</span>
             </div>
-            <div className="h-6 w-px bg-[#77756E]/30"></div>
+            <div className="h-6 w-px bg-rock/30"></div>
             <div>
-              <span className="block text-[#EDE9DF] font-bold">173 Avaliações</span>
-              <span className="text-[10px] text-[#D86A3E] uppercase">Preferido dos Hóspedes · Top 10%</span>
+              <span className="block text-paper font-semibold">173 Avaliações</span>
+              <span className="text-[10px] text-signal font-semibold uppercase tracking-wider">Preferido dos Hóspedes · Top 10%</span>
             </div>
           </div>
         </div>
@@ -62,42 +62,42 @@ export const Reviews: React.FC = () => {
           {reviewsList.map((rev, index) => (
             <div
               key={index}
-              className="bg-[#292A27]/60 border border-[#77756E]/30 p-8 rounded-sm flex flex-col justify-between space-y-6 relative group hover:border-[#D86A3E]/50 transition-colors"
+              className="bg-warm-cream border border-rock/20 p-8 rounded-lg flex flex-col justify-between space-y-6 relative group hover:border-signal/50 transition-colors shadow-sm"
             >
               <div className="space-y-4">
                 {/* Rating Stars */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1">
                     {[...Array(rev.rating)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 text-[#D86A3E] fill-[#D86A3E]" />
+                      <Star key={i} className="w-3.5 h-3.5 text-clay fill-clay" />
                     ))}
                   </div>
-                  <span className="font-mono text-[10px] text-[#D86A3E] bg-[#151715] px-2 py-0.5 border border-[#77756E]/30 rounded-xs">
+                  <span className="font-sans text-[10px] text-clay bg-parchment px-2.5 py-0.5 border border-rock/20 rounded-full font-medium">
                     {rev.unit}
                   </span>
                 </div>
 
-                <p className="font-sans text-sm text-[#EDE9DF] leading-relaxed italic">
+                <p className="font-display text-base text-warm-charcoal leading-relaxed italic">
                   "{rev.text}"
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#77756E]/20 flex items-center justify-between font-mono text-xs">
+              <div className="pt-4 border-t border-rock/20 flex items-center justify-between font-sans text-xs">
                 <div>
-                  <span className="font-bold text-[#EDE9DF] block">{rev.author}</span>
-                  <span className="text-[10px] text-[#77756E]">{rev.date}</span>
+                  <span className="font-bold text-warm-charcoal block">{rev.author}</span>
+                  <span className="text-[10px] text-rock">{rev.date}</span>
                 </div>
-                <ShieldCheck className="w-4 h-4 text-[#D86A3E]" />
+                <ShieldCheck className="w-4 h-4 text-clay" />
               </div>
             </div>
           ))}
         </div>
 
         {/* Airbnb Reviews Link Bar */}
-        <div className="bg-[#292A27] p-6 border border-[#77756E]/30 rounded-sm flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs">
+        <div className="bg-graphite p-6 border border-rock/30 rounded-lg flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-xs">
           <div className="flex items-center gap-3">
-            <Heart className="w-5 h-5 text-[#D86A3E]" />
-            <span className="text-[#B9B3A6]">
+            <Heart className="w-5 h-5 text-signal" />
+            <span className="text-limestone">
               Avaliações reais e auditadas diretamente no perfil oficial do Refúgio Santalena no Airbnb.
             </span>
           </div>
@@ -105,7 +105,7 @@ export const Reviews: React.FC = () => {
             href="https://www.airbnb.com.br/rooms/917479622006307880"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#151715] hover:bg-[#D86A3E] hover:text-[#151715] text-[#EDE9DF] border border-[#77756E]/40 font-bold uppercase rounded-sm transition-all shrink-0"
+            className="inline-flex items-center gap-2 px-6 py-2.5 bg-summit hover:bg-graphite text-paper border border-rock/40 font-bold uppercase rounded-full transition-all shrink-0"
           >
             Ler todas as avaliações no Airbnb
             <ArrowUpRight className="w-4 h-4" />

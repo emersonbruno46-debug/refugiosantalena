@@ -87,20 +87,20 @@ export const FieldGallery: React.FC = () => {
   };
 
   return (
-    <section className="py-24 px-4 sm:px-8 bg-[#151715] relative overflow-hidden border-t border-[#292A27]">
+    <section className="py-24 px-4 sm:px-8 bg-summit relative overflow-hidden border-t border-graphite">
       <div className="max-w-7xl mx-auto relative z-10 space-y-12">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#77756E]/30 pb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-rock/30 pb-8">
           <div>
-            <div className="inline-flex items-center gap-2 font-mono text-xs text-[#D86A3E] uppercase tracking-widest mb-3">
+            <div className="inline-flex items-center gap-2 font-sans text-xs text-signal uppercase tracking-widest mb-3">
               <Camera className="w-4 h-4" />
               EXPEDITION FILM ROLL · REGISTROS REAIS
             </div>
-            <h2 className="font-display font-bold text-3xl sm:text-5xl text-[#EDE9DF] tracking-tight">
+            <h2 className="font-display font-medium text-3xl sm:text-5xl text-paper tracking-tight">
               Registro de campo.
             </h2>
           </div>
-          <p className="font-mono text-xs text-[#B9B3A6] max-w-md">
+          <p className="font-sans text-xs text-limestone max-w-md">
             Contact sheet com fotografias autênticas do Refúgio Santalena, capturando luz, madeira, rocha e paisagem.
           </p>
         </div>
@@ -111,28 +111,28 @@ export const FieldGallery: React.FC = () => {
             <div
               key={item.id}
               onClick={() => openLightbox(index)}
-              className={`relative group rounded-sm overflow-hidden border border-[#77756E]/30 bg-[#292A27] h-64 sm:h-72 cursor-pointer transition-all duration-300 hover:border-[#D86A3E] ${item.aspect}`}
+              className={`relative group rounded-lg overflow-hidden border border-rock/30 bg-graphite h-64 sm:h-72 cursor-pointer transition-all duration-300 hover:border-signal ${item.aspect}`}
             >
               <img
                 src={item.src}
                 alt={item.title}
                 className="w-full h-full object-cover filter contrast-[1.05] group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#151715]/90 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-summit/90 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity"></div>
 
               {/* Technical Stamp Overlay */}
-              <div className="absolute top-3 left-3 font-mono text-[10px] text-[#EDE9DF] bg-[#151715]/80 px-2 py-0.5 border border-[#77756E]/30 rounded-xs">
+              <div className="absolute top-3 left-3 font-sans text-[10px] text-paper bg-summit/80 px-2.5 py-0.5 border border-rock/30 rounded-full tracking-wide font-medium">
                 SHOT #{item.id}
               </div>
 
-              <div className="absolute bottom-3 left-3 right-3 font-mono text-xs text-[#EDE9DF] flex items-center justify-between">
+              <div className="absolute bottom-3 left-3 right-3 font-sans text-xs text-paper flex items-center justify-between">
                 <div>
                   <span className="block font-bold text-[11px] truncate max-w-[200px] sm:max-w-[240px]">
                     {item.title}
                   </span>
-                  <span className="text-[10px] text-[#B9B3A6]">{item.location}</span>
+                  <span className="text-[10px] text-limestone">{item.location}</span>
                 </div>
-                <Maximize2 className="w-4 h-4 text-[#D86A3E] opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                <Maximize2 className="w-4 h-4 text-signal opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
               </div>
             </div>
           ))}
@@ -141,30 +141,30 @@ export const FieldGallery: React.FC = () => {
 
       {/* Lightbox Modal */}
       {selectedImageIndex !== null && (
-        <div className="fixed inset-0 z-50 bg-[#151715]/95 backdrop-blur-md flex items-center justify-center p-4 sm:p-8">
+        <div className="fixed inset-0 z-50 bg-summit/95 backdrop-blur-md flex items-center justify-center p-4 sm:p-8">
           <button
             onClick={closeLightbox}
-            className="absolute top-6 right-6 p-3 bg-[#292A27] border border-[#77756E]/40 text-[#EDE9DF] hover:text-[#D86A3E] rounded-sm"
+            className="absolute top-6 right-6 p-3 bg-graphite border border-rock/40 text-paper hover:text-signal rounded-full shadow-md"
           >
             <X className="w-6 h-6" />
           </button>
 
           <button
             onClick={prevImage}
-            className="absolute left-4 sm:left-8 p-3 bg-[#292A27] border border-[#77756E]/40 text-[#EDE9DF] hover:text-[#D86A3E] rounded-sm"
+            className="absolute left-4 sm:left-8 p-3 bg-graphite border border-rock/40 text-paper hover:text-signal rounded-full shadow-md"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
 
           <button
             onClick={nextImage}
-            className="absolute right-4 sm:right-8 p-3 bg-[#292A27] border border-[#77756E]/40 text-[#EDE9DF] hover:text-[#D86A3E] rounded-sm"
+            className="absolute right-4 sm:right-8 p-3 bg-graphite border border-rock/40 text-paper hover:text-signal rounded-full shadow-md"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
 
           <div className="max-w-4xl w-full flex flex-col items-center space-y-4">
-            <div className="max-h-[75vh] w-full rounded-sm overflow-hidden border border-[#77756E]/40 bg-[#292A27]">
+            <div className="max-h-[75vh] w-full rounded-lg overflow-hidden border border-rock/40 bg-graphite">
               <img
                 src={items[selectedImageIndex].src}
                 alt={items[selectedImageIndex].title}
@@ -172,16 +172,16 @@ export const FieldGallery: React.FC = () => {
               />
             </div>
 
-            <div className="w-full font-mono text-xs text-[#EDE9DF] bg-[#292A27] p-4 border border-[#77756E]/30 rounded-sm flex items-center justify-between">
+            <div className="w-full font-sans text-xs text-paper bg-graphite p-4 border border-rock/30 rounded-full px-6 flex items-center justify-between">
               <div>
-                <span className="text-[#D86A3E] font-bold block">
+                <span className="text-signal font-bold block">
                   SHOT #{items[selectedImageIndex].id} · {items[selectedImageIndex].title}
                 </span>
-                <span className="text-[#B9B3A6] text-[11px]">
+                <span className="text-limestone text-[11px]">
                   {items[selectedImageIndex].location} · Refúgio Santalena
                 </span>
               </div>
-              <span className="text-[#77756E]">
+              <span className="text-rock font-medium">
                 {selectedImageIndex + 1} / {items.length}
               </span>
             </div>
