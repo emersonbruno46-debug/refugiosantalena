@@ -70,11 +70,22 @@ export const Hero: React.FC = () => {
       gsap.set('.hero-fact', { opacity: 0, y: 12 });
       gsap.set('.hero-topo-path', { strokeDasharray: 1000, strokeDashoffset: 1000, opacity: 0 });
 
+      const headerEl = document.querySelector('header');
+      if (headerEl) {
+        gsap.set(headerEl, { opacity: 0, y: -8 });
+      }
+
       // Run Sequence
       tl.to('.hero-bg', { opacity: 1, scale: 1.035, duration: 1.4 })
-        .to('.hero-glow', { opacity: 0.45, duration: 1.8 }, '-=0.9')
-        .to('header', { opacity: 1, y: 0, duration: 0.6 }, '-=0.8')
-        .to('.hero-loc-badge', { opacity: 1, duration: 0.5 }, '-=0.5')
+        .to('.hero-glow', { opacity: 0.45, duration: 1.8 }, '-=0.9');
+
+      if (headerEl) {
+        tl.to(headerEl, { opacity: 1, y: 0, duration: 0.6 }, '-=0.8');
+      } else {
+        tl.to({}, { duration: 0.6 }, '-=0.8');
+      }
+
+      tl.to('.hero-loc-badge', { opacity: 1, duration: 0.5 }, '-=0.5')
         .to(locationLineRef.current, { width: 32, duration: 0.5 }, '-=0.3')
         .to('.hero-title-mask > span', { yPercent: 0, duration: 0.85, stagger: 0.11 }, '-=0.3')
         .to(trailStrokeRef.current, { strokeDashoffset: 0, duration: 0.8 }, '-=0.35')
