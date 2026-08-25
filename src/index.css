@@ -68,6 +68,10 @@ body::before {
   background-image: repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(208, 194, 176, 0.03) 20px);
 }
 
+.bg-radial-vignette {
+  background-image: radial-gradient(circle, transparent 20%, rgba(36, 32, 28, 0.45) 60%, rgba(36, 32, 28, 0.96) 100%);
+}
+
 /* Custom Scrollbar - Warm Mountain Lodge Tones */
 ::-webkit-scrollbar {
   width: 8px;
