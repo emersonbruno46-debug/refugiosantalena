@@ -17,7 +17,7 @@ import { Footer } from './components/Footer';
 
 export function App() {
   return (
-    <div className="min-h-screen bg-[#151715] text-[#EDE9DF] selection:bg-[#D86A3E] selection:text-[#151715] font-sans antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-[#151715] text-[#EDE9DF] selection:bg-[#5F7F6A] selection:text-white font-sans antialiased overflow-x-hidden">
       {/* 00. Field Navigation Header */}
       <Header />
 

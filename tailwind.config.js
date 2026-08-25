@@ -38,8 +38,8 @@ export default {
         'dk-border': 'rgba(245,235,222,0.08)',
 
         // Muted hospitality highlights
-        'hl-terracotta': '#A65F43',
-        'hl-clay': '#93634E',
+        'hl-terracotta': '#5F7F6A',  // Beautiful warm sage green
+        'hl-clay': '#4F6B58',        // Beautiful deep forest green
         'hl-moss': '#66705C',
         'hl-forest': '#314233',
 

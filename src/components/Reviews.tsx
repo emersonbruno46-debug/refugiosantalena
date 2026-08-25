@@ -44,7 +44,7 @@ export const Reviews: React.FC = () => {
           </div>
 
           {/* Metrics Card */}
-          <div className="flex flex-wrap items-center gap-4 bg-wl-parchment px-5 py-3 border border-wl-border rounded-full font-sans text-xs shadow-sm">
+          <div className="flex flex-wrap items-center gap-4 bg-white/45 px-5 py-3 border border-white/40 rounded-full font-sans text-xs shadow-sm backdrop-blur-md">
             <div className="flex items-center gap-2">
               <Star className="w-4 h-4 text-hl-terracotta fill-hl-terracotta" />
               <span className="font-semibold text-lg text-wl-text">4.97</span>
@@ -62,7 +62,7 @@ export const Reviews: React.FC = () => {
           {reviewsList.map((rev, index) => (
             <div
               key={index}
-              className="bg-wl-parchment p-8 rounded-xl flex flex-col justify-between space-y-6 relative group shadow-sm transition-all hover:bg-wl-parchment/95"
+              className="bg-white/35 p-8 rounded-xl flex flex-col justify-between space-y-6 relative group shadow-sm border border-white/30 backdrop-blur-md transition-all hover:bg-white/50"
             >
               <div className="space-y-4">
                 {/* Rating Stars */}
@@ -94,7 +94,7 @@ export const Reviews: React.FC = () => {
         </div>
 
         {/* Airbnb Reviews Link Bar */}
-        <div className="bg-wl-parchment p-6 border border-wl-border rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-xs shadow-sm">
+        <div className="bg-white/35 p-6 border border-white/30 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-xs backdrop-blur-md shadow-sm">
           <div className="flex items-center gap-3">
             <Heart className="w-5 h-5 text-hl-moss" />
             <span className="text-wl-secondary">

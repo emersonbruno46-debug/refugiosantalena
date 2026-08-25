@@ -107,8 +107,8 @@ export const ChaletSelector: React.FC = () => {
                   onClick={() => setActiveChaletId(chalet.id)}
                   className={`w-full text-left p-6 rounded-lg border transition-all duration-300 relative overflow-hidden group ${
                     isActive
-                      ? 'bg-dk-secondary border-hl-moss/40 shadow-md'
-                      : 'bg-dk-bg border-dk-border/40 hover:border-dk-border/80 hover:bg-dk-secondary/35'
+                      ? 'bg-white/[0.05] border-white/10 backdrop-blur-md shadow-md'
+                      : 'bg-white/[0.01] border-white/5 hover:border-white/10 hover:bg-white/[0.03] backdrop-blur-sm'
                   }`}
                 >
                   {/* Left Indicator Line */}
@@ -148,7 +148,7 @@ export const ChaletSelector: React.FC = () => {
             })}
 
             {/* Quick Note Box */}
-            <div className="p-4 bg-dk-secondary/40 border border-dk-border rounded-lg font-sans text-xs text-dk-secondary-text space-y-2 mt-6">
+            <div className="p-4 bg-white/[0.02] border border-white/5 rounded-lg font-sans text-xs text-dk-secondary-text space-y-2 mt-6 backdrop-blur-sm">
               <div className="flex items-center gap-2 text-hl-moss">
                 <Mountain className="w-4 h-4" />
                 <span className="font-semibold uppercase tracking-wider">Nota de Reserva</span>
@@ -160,7 +160,7 @@ export const ChaletSelector: React.FC = () => {
           </div>
 
           {/* Right Column: Active Chalet Preview & Deep Details */}
-          <div className="lg:col-span-8 bg-dk-secondary border border-dk-border rounded-xl overflow-hidden flex flex-col justify-between">
+          <div className="lg:col-span-8 bg-white/[0.03] border border-white/5 rounded-xl overflow-hidden flex flex-col justify-between backdrop-blur-md shadow-lg">
             {/* Image Preview Box */}
             <div className="relative h-80 sm:h-[420px] w-full overflow-hidden">
               <img
@@ -168,10 +168,10 @@ export const ChaletSelector: React.FC = () => {
                 alt={`Chalé ${activeChalet.name}`}
                 className="w-full h-full object-cover filter contrast-[1.05] transition-transform duration-700 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dk-secondary via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-dk-bg via-transparent to-transparent"></div>
 
               {/* Top Rating Badge */}
-              <div className="absolute top-4 right-4 bg-dk-bg/80 backdrop-blur-md px-3 py-1 border border-dk-border/40 font-sans text-xs text-dk-text flex items-center gap-2 rounded-full font-medium">
+              <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-md px-3 py-1 border border-white/10 font-sans text-xs text-dk-text flex items-center gap-2 rounded-full font-medium">
                 <Star className="w-3.5 h-3.5 text-hl-terracotta fill-hl-terracotta" />
                 <span className="font-semibold">{activeChalet.rating}</span>
                 <span className="text-dk-secondary-text">({activeChalet.reviewsCount})</span>

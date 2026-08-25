@@ -166,9 +166,9 @@ export const Hero: React.FC = () => {
         <div className="hero-exit-darken absolute inset-0 bg-black opacity-0 pointer-events-none" />
         <div className="absolute inset-0 bg-topo-pattern opacity-10" />
 
-        {/* Ambient Warm Cabin Light Gradients (lit from within lamp/wood) */}
-        <div className="hero-glow absolute top-[35%] right-[20%] w-[45vw] h-[45vw] rounded-full bg-[#A65F43] opacity-0 filter blur-[100px] mix-blend-screen pointer-events-none" />
-        <div className="hero-glow absolute top-[60%] left-[30%] w-[30vw] h-[30vw] rounded-full bg-[#93634E] opacity-0 filter blur-[90px] mix-blend-screen pointer-events-none" />
+        {/* Ambient Green Cabin Light Gradients */}
+        <div className="hero-glow absolute top-[35%] right-[20%] w-[45vw] h-[45vw] rounded-full bg-[#4F6B58] opacity-0 filter blur-[120px] mix-blend-screen pointer-events-none" />
+        <div className="hero-glow absolute top-[60%] left-[30%] w-[30vw] h-[30vw] rounded-full bg-[#5F7F6A] opacity-0 filter blur-[100px] mix-blend-screen pointer-events-none" />
       </div>
 
       {/* Decorative Organic Mountain Topography SVG */}
@@ -194,7 +194,7 @@ export const Hero: React.FC = () => {
         strokeWidth="1"
       >
         <path d="M10,20 Q60,80 120,40 T190,120 T100,240 T20,290" strokeDasharray="4 4" />
-        <circle cx="120" cy="40" r="3" fill="#A65F43" />
+        <circle cx="120" cy="40" r="3" fill="#5F7F6A" />
         <circle cx="100" cy="240" r="2.5" fill="#C8BDB0" />
       </svg>
 
@@ -202,24 +202,24 @@ export const Hero: React.FC = () => {
       <div className="relative z-10 max-w-5xl mx-auto w-full my-auto py-12 flex flex-col items-start select-none">
         
         {/* Destination Location Badge Signature */}
-        <div className="hero-loc-badge flex items-center gap-3 mb-6 font-sans text-xs tracking-wider uppercase font-semibold text-dk-text">
-          <Compass className="w-3.5 h-3.5 text-hl-terracotta animate-spin-slow" />
-          <div ref={locationLineRef} className="h-[1px] bg-hl-terracotta/60" />
+        <div className="hero-loc-badge flex items-center gap-3 mb-6 font-sans text-xs tracking-wider uppercase font-semibold text-white/90">
+          <Compass className="w-3.5 h-3.5 text-white/90 animate-spin-slow" />
+          <div ref={locationLineRef} className="h-[1px] bg-white/50" />
           <span>REFÚGIO SANTALENA · PAIOL GRANDE · SP</span>
         </div>
 
         {/* Headline */}
-        <h1 className="font-display font-medium text-4xl sm:text-6xl lg:text-7xl xl:text-[clamp(68px,5.3vw,96px)] tracking-tight text-dk-text leading-[0.96] max-w-4xl mb-6 relative">
+        <h1 className="font-display font-medium text-5xl sm:text-7xl lg:text-8xl xl:text-[clamp(80px,6.2vw,110px)] tracking-tight text-white leading-[0.93] max-w-5xl mb-6 relative">
           <div className="hero-title-mask block overflow-hidden py-1">
             <span className="block">Entre montanhas,</span>
           </div>
           <div className="hero-title-mask block overflow-hidden py-1">
             <span className="relative inline-block">
               existe um{' '}
-              <span className="italic font-display font-normal text-hl-terracotta">lugar para ficar</span>.
+              <span className="italic font-display font-normal text-white">lugar para ficar</span>.
               {/* Hand-drawn organic underline path */}
               <svg
-                className="absolute left-0 bottom-[-4px] w-full h-[10px] text-hl-terracotta/80 overflow-visible pointer-events-none select-none"
+                className="absolute left-0 bottom-[-4px] w-full h-[12px] text-white/90 overflow-visible pointer-events-none select-none"
                 viewBox="0 0 300 10"
                 fill="none"
                 preserveAspectRatio="none"
@@ -237,7 +237,7 @@ export const Hero: React.FC = () => {
         </h1>
 
         {/* Body Text */}
-        <p className="hero-body font-sans text-base sm:text-xl text-dk-secondary-text max-w-2xl font-light leading-[1.65] mb-10">
+        <p className="hero-body font-sans text-base sm:text-xl text-white/80 max-w-2xl font-light leading-[1.65] mb-10">
           Chalés privativos próximos à Pedra do Baú, feitos para duas pessoas, com natureza, fogo, água quente e uma vista que muda o plano do fim de semana.
         </p>
 
@@ -245,13 +245,13 @@ export const Hero: React.FC = () => {
         <div className="hero-cta-wrap flex flex-wrap items-center gap-4 w-full sm:w-auto">
           <a
             href="#chales"
-            className="hero-cta w-full sm:w-auto text-center px-8 py-4 bg-hl-forest hover:bg-hl-forest/90 hover:scale-[1.015] text-dk-text font-sans text-sm font-semibold uppercase tracking-wider rounded-full shadow-lg shadow-hl-forest/10 transition-all duration-200"
+            className="hero-cta w-full sm:w-auto text-center px-8 py-4 bg-hl-forest hover:bg-hl-forest/90 hover:scale-[1.015] text-white font-sans text-sm font-semibold uppercase tracking-wider rounded-full shadow-lg shadow-hl-forest/15 transition-all duration-200"
           >
             Escolher meu chalé
           </a>
           <a
             href="#refugio"
-            className="hero-cta w-full sm:w-auto text-center px-8 py-4 bg-white/[0.04] hover:bg-white/[0.08] text-dk-text border border-white/[0.18] font-sans text-sm font-semibold uppercase tracking-wider rounded-full backdrop-blur-md transition-all duration-200"
+            className="hero-cta w-full sm:w-auto text-center px-8 py-4 bg-white/[0.04] hover:bg-white/[0.08] text-white border border-white/[0.18] font-sans text-sm font-semibold uppercase tracking-wider rounded-full backdrop-blur-md transition-all duration-200"
           >
             Explorar o Refúgio
           </a>
@@ -259,39 +259,39 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Campaign Bottom Experience Strip (No Boxed Panels) */}
-      <div className="hero-facts-wrap relative z-10 max-w-7xl mx-auto w-full pt-6 border-t border-dk-border/40 grid grid-cols-2 md:grid-cols-4 gap-6 text-xs font-sans text-dk-secondary-text">
+      <div className="hero-facts-wrap relative z-10 max-w-7xl mx-auto w-full pt-6 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-xs font-sans text-white/65">
         <div className="hero-fact flex items-center gap-3">
-          <MapPin className="w-4 h-4 text-hl-moss" />
+          <MapPin className="w-4 h-4 text-white/75" />
           <div>
-            <span className="block text-[10px] text-hl-moss uppercase tracking-wider font-semibold">LANDMARK</span>
-            <span className="text-dk-text font-medium">Pedra do Baú (Visível)</span>
+            <span className="block text-[10px] text-white/60 uppercase tracking-wider font-semibold">LANDMARK</span>
+            <span className="text-white font-medium">Pedra do Baú (Visível)</span>
           </div>
         </div>
-        <div className="hidden md:block h-6 w-px bg-dk-border/45 self-center" />
+        <div className="hidden md:block h-6 w-px bg-white/10 self-center" />
         <div className="hero-fact flex items-center gap-3">
-          <Mountain className="w-4 h-4 text-hl-moss" />
+          <Mountain className="w-4 h-4 text-white/75" />
           <div>
-            <span className="block text-[10px] text-hl-moss uppercase tracking-wider font-semibold">LOCALIZAÇÃO</span>
-            <span className="text-dk-text font-medium">São Bento do Sapucaí — SP</span>
+            <span className="block text-[10px] text-white/60 uppercase tracking-wider font-semibold">LOCALIZAÇÃO</span>
+            <span className="text-white font-medium">São Bento do Sapucaí — SP</span>
           </div>
         </div>
-        <div className="hidden md:block h-6 w-px bg-dk-border/45 self-center" />
+        <div className="hidden md:block h-6 w-px bg-white/10 self-center" />
         <div className="hero-fact flex items-center gap-3">
-          <Flame className="w-4 h-4 text-hl-moss" />
+          <Flame className="w-4 h-4 text-white/75" />
           <div>
-            <span className="block text-[10px] text-hl-moss uppercase tracking-wider font-semibold">EXPERIÊNCIA</span>
-            <span className="text-dk-text font-medium">Jacuzzi · Lareira · Fogueira</span>
+            <span className="block text-[10px] text-white/60 uppercase tracking-wider font-semibold">EXPERIÊNCIA</span>
+            <span className="text-white font-medium">Jacuzzi · Lareira · Fogueira</span>
           </div>
         </div>
-        <div className="hidden md:block h-6 w-px bg-dk-border/45 self-center" />
+        <div className="hidden md:block h-6 w-px bg-white/10 self-center" />
         <div className="hero-fact flex items-center justify-between md:justify-end gap-3">
           <div className="text-right">
-            <span className="block text-[10px] text-hl-moss uppercase tracking-wider font-semibold">CAPACIDADE</span>
-            <span className="text-dk-text font-medium">02 Pessoas / Chalé</span>
+            <span className="block text-[10px] text-white/60 tracking-wider uppercase font-semibold">CAPACIDADE</span>
+            <span className="text-white font-medium">02 Pessoas / Chalé</span>
           </div>
           <a
             href="#refugio"
-            className="w-8 h-8 rounded-full bg-dk-secondary flex items-center justify-center text-dk-text hover:text-hl-terracotta transition-colors border border-dk-border/40 ml-2"
+            className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white hover:text-hl-terracotta transition-colors border border-white/10 ml-2"
             aria-label="Rolar para baixo"
           >
             <ArrowDown className="w-4 h-4 animate-bounce" />
